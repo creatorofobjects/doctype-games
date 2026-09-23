@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("bg.png") repeat; /* shared background */
+  color: #fff;
+  text-align: center;
+}
+header {
+  padding: 40px 20px;
+  background: rgba(0,0,0,0.6);
+}
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+}
+button {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: darkred;
+}
