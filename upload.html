@@ -1,30 +1,90 @@
-<form id="uploadForm">
-  <label for="title">Game Title:</label><br>
-  <input type="text" id="title" name="title" required><br><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Game - !DOCTYPE Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific form styling */
+    main {
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, button {
+      margin-top: 5px;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      margin-top: 20px;
+    }
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.svg" alt="!DOCTYPE Games Logo">
+    <h1>!DOCTYPE Games</h1>
+    <h2>The New Flash Heaven</h2>
+  </header>
 
-  <label for="file">Upload Game File:</label><br>
-  <input type="file" id="file" name="file" required><br><br>
+  <main>
+    <h2>Upload a Game</h2>
+    <form id="uploadForm">
+      <label for="title">Game Title:</label>
+      <input type="text" id="title" name="title" required>
 
-  <label for="rating">Age Rating:</label><br>
-  <select id="rating" name="rating" required>
-    <option value="E">E (Everyone)</option>
-    <option value="T">T (Teen)</option>
-    <option value="M">M (Mature)</option>
-    <option value="A">A (Adults Only)</option>
-  </select><br><br>
+      <label for="file">Upload Game File:</label>
+      <input type="file" id="file" name="file" required>
 
-  <button type="submit">Upload Game</button>
-</form>
+      <label for="rating">Age Rating:</label>
+      <select id="rating" name="rating" required>
+        <option value="E">E (Everyone)</option>
+        <option value="T">T (Teen)</option>
+        <option value="M">M (Mature)</option>
+        <option value="A">A (Adults Only)</option>
+      </select>
 
-<p id="message"></p>
+      <!-- Default uploader set to Anonymous -->
+      <input type="hidden" id="uploader" name="uploader" value="Anonymous">
 
-<script>
-  document.getElementById("uploadForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const title = document.getElementById("title").value.trim();
-    const rating = document.getElementById("rating").value;
-    const message = document.getElementById("message");
+      <button type="submit">Upload Game</button>
+    </form>
 
-    message.textContent = "Game '" + title + "' uploaded with rating: " + rating;
-  });
-</script>
+    <p id="message"></p>
+  </main>
+
+  <footer>
+    <p>⚡ The New Flash Heaven ⚡</p>
+  </footer>
+
+  <script>
+    document.getElementById("uploadForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const title = document.getElementById("title").value.trim();
+      const rating = document.getElementById("rating").value;
+      const uploader = document.getElementById("uploader").value;
+      const message = document.getElementById("message");
+
+      message.textContent = "Game '" + title + "' uploaded by " + uploader + " with rating: " + rating;
+    });
+  </script>
+</body>
+</html>
