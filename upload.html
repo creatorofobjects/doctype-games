@@ -1,0 +1,30 @@
+<form id="uploadForm">
+  <label for="title">Game Title:</label><br>
+  <input type="text" id="title" name="title" required><br><br>
+
+  <label for="file">Upload Game File:</label><br>
+  <input type="file" id="file" name="file" required><br><br>
+
+  <label for="rating">Age Rating:</label><br>
+  <select id="rating" name="rating" required>
+    <option value="E">E (Everyone)</option>
+    <option value="T">T (Teen)</option>
+    <option value="M">M (Mature)</option>
+    <option value="A">A (Adults Only)</option>
+  </select><br><br>
+
+  <button type="submit">Upload Game</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+  document.getElementById("uploadForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const title = document.getElementById("title").value.trim();
+    const rating = document.getElementById("rating").value;
+    const message = document.getElementById("message");
+
+    message.textContent = "Game '" + title + "' uploaded with rating: " + rating;
+  });
+</script>
