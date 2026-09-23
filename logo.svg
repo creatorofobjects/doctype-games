@@ -1,7 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
-  <rect width="400" height="120" fill="black"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-        font-family="Arial, sans-serif" font-size="36" fill="white">
-    !DOCTYPE Games
+  <!-- Gradient background -->
+  <defs>
+    <linearGradient id="redGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B0000"/>
+      <stop offset="100%" stop-color="#FF4C4C"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="120" fill="url(#redGradient)" rx="12" ry="12"/>
+
+  <!-- Stylized white angular logo -->
+  <polygon points="40,30 70,20 60,60 90,50 60,90 40,70" fill="white"/>
+
+  <!-- Text -->
+  <text x="130" y="65" font-family="Arial, sans-serif" font-size="32" fill="black" font-weight="bold">
+    DOC!TYPE
+  </text>
+  <text x="290" y="65" font-family="Arial, sans-serif" font-size="32" fill="black">
+    Games
   </text>
 </svg>
