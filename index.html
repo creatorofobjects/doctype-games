@@ -5,58 +5,26 @@
   <title>!DOCTYPE Games</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url("bg.png") repeat; /* replace bg.png with your background image file */
-      color: #fff;
-      text-align: center;
-    }
-    header {
-      padding: 40px 20px;
-      background: rgba(0,0,0,0.6); /* overlay so text is readable */
-    }
-    header img {
-      height: 80px;
-    }
-    h1 {
-      margin-top: 20px;
-      font-size: 2em;
-    }
-    h2 {
-      margin-top: 10px;
-      font-size: 1.5em;
-      color: #ffcccb;
-    }
     main {
       padding: 20px;
       background: rgba(0,0,0,0.7);
       margin: 20px auto;
-      max-width: 900px;
+      max-width: 600px;
       border-radius: 10px;
+      text-align: center;
     }
-    .demo {
-      margin-top: 30px;
+    .nav-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
     }
-    .signup-link button {
-      margin-top: 30px;
-      padding: 12px 24px;
-      font-size: 1.2em;
-      background: red;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .signup-link button:hover {
-      background: darkred;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background: rgba(0,0,0,0.6);
+    .nav-buttons a button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1em;
     }
   </style>
 </head>
@@ -65,25 +33,19 @@
     <img src="logo.svg" alt="!DOCTYPE Games Logo">
     <h1>!DOCTYPE Games</h1>
     <h2>The New Flash Heaven</h2>
-    <p>Declare your creativity — Flash, HTML, EXE, and more.</p>
   </header>
 
   <main>
-    <p>Welcome to the prototype site. Soon you’ll be able to upload and play SWF, HTML, and EXE games here.</p>
-    <p>⚡ Work in progress — stay tuned!</p>
+    <h2>Welcome to !DOCTYPE Games</h2>
+    <p>Choose your path below:</p>
 
-    <div class="demo">
-      <h2>Demo Flash Game</h2>
-      <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-      <embed src="games/demo.swf" width="640" height="480">
+    <div class="nav-buttons">
+      <a href="signup.html"><button>Sign Up</button></a>
+      <a href="upload.html"><button>Upload a Game</button></a>
+      <a href="play.html"><button>Play Browser Games</button></a>
+      <a href="downloads.html"><button>Download PC Games</button></a>
+      <a href="tac.html"><button>Terms & Conditions</button></a>
     </div>
-
-<div class="signup-link">
-  <a href="singup.html">
-    <button>Sign Up</button>
-<a href="play.html"><button>Play Games</button></a>
-<a href="downloads.html"><button>Download Games</button></a>
-  </div>
   </main>
 
   <footer>
