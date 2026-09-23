@@ -1,21 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
-  <!-- Gradient background -->
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="70" viewBox="0 0 260 70">
   <defs>
-    <linearGradient id="redGradient" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#b30000"/>
-      <stop offset="100%" stop-color="#ff3333"/>
+    <linearGradient id="flashGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff3c3c"/>
+      <stop offset="100%" stop-color="#b00000"/>
     </linearGradient>
   </defs>
-  <rect width="400" height="120" rx="20" ry="20" fill="url(#redGradient)"/>
-
-  <!-- Stylized white arrow/mark -->
-  <polygon points="40,30 70,20 65,55 95,45 65,90 40,70" fill="white"/>
-
-  <!-- Text -->
-  <text x="130" y="65" font-family="Arial Black, sans-serif" font-size="34" fill="black">
-    DOC!TYPE
-  </text>
-  <text x="290" y="65" font-family="Arial, sans-serif" font-size="34" fill="black">
-    Games
+  <rect x="0" y="0" width="260" height="70" rx="15" fill="url(#flashGradient)"/>
+  <circle cx="45" cy="35" r="20" fill="#fff"/>
+  <polygon points="42,20 52,35 42,52 52,50" fill="#ff3c3c"/>
+  <text x="70" y="42" font-family="Impact, Arial Black, sans-serif" font-size="20" fill="#fff" stroke="#000" stroke-width="1.5">
+    DOC!TYPE Games
   </text>
 </svg>
