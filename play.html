@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Play Games - !DOCTYPE Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.svg" alt="!DOCTYPE Games Logo">
+    <h1>!DOCTYPE Games</h1>
+    <h2>The New Flash Heaven</h2>
+  </header>
+
+  <main>
+    <h2>Play Browser Games</h2>
+    <p>Here you can play HTML and SWF games directly in your browser.</p>
+
+    <div class="game">
+      <h3>Demo SWF Game</h3>
+      <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+      <embed src="games/demo.swf" width="640" height="480">
+    </div>
+
+    <div class="game">
+      <h3>Demo HTML Game</h3>
+      <iframe src="games/demo.html" width="640" height="480"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>⚡ The New Flash Heaven ⚡</p>
+  </footer>
+</body>
+</html>
