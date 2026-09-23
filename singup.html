@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - DOCTYPE Games</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+    }
+    form {
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    input[type="text"] {
+      padding: 10px;
+      margin: 10px;
+      width: 250px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sign Up</h1>
+  <form id="signupForm">
+    <input type="text" id="username" placeholder="Enter username" required>
+    
+    <label>
+      <input type="checkbox" id="terms" required>
+      I agree to the Terms & Conditions
+    </label>
+    
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    // Example list of taken usernames
+    const takenUsernames = ["demo", "admin", "player1"];
+
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const terms = document.getElementById("terms").checked;
+      const message = document.getElementById("message");
+
+      if (!terms) {
+        message.textContent = "You must agree to the Terms & Conditions.";
+        return;
+      }
+
+      if (takenUsernames.includes(username.toLowerCase())) {
+        message.textContent = "Sorry, that username is already taken.";
+      } else {
+        message.textContent = "Success! Welcome, " + username + " 🎉";
+      }
+    });
+  </script>
+</body>
+</html>
